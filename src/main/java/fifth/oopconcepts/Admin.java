@@ -7,16 +7,10 @@ public class Admin extends Moderator {
     }
 
     public boolean canEdit( Comment comment ) {
-        if ( comment.getAuthor() instanceof User || comment.getAuthor() instanceof Moderator || comment.getAuthor() instanceof Admin ) {
             return true;
-        }
-        return false;
     }
 
     public boolean canDelete( Comment comment ) {
-        if ( comment.getAuthor() instanceof User || comment.getAuthor() instanceof Moderator || comment.getAuthor() instanceof Admin ) {
             return true;
-        }
-        return false;
     }
 }
